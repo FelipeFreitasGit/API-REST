@@ -1,20 +1,21 @@
 const app = require('express')();
 const mongoose = require('mongoose');
 const requireDir = require('require-dir');
+const bodyParser = require('body-parser');
 
 const dbConfig = require('./config/database');
 
 mongoose.connect(dbConfig.url);
 requireDir(dbConfig.modelsPath);
 
-const User = mongoose.model('User');
-User.create({
-  name: 'Diego',
-  username: 'felipe',
-  email: 'felipe@gmail.com',
-  password: '123',
-}, () => {
-  console.log('ok');
+app.use(bodyParser.json());
+
+app.post('/create', async (req, res) => {
+  const User = mongoose.model('User');
+
+  await User.create(req.body);
+
+  return res.send();
 });
 
 app.listen(3000);
