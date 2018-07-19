@@ -1,0 +1,25 @@
+{
+  "name": "API-REST",
+  "version": "1.0.0",
+  "description": "API Twitter com Nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FelipeFreitasGit/API-REST.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FelipeFreitasGit/API-REST/issues"
+  },
+  "homepage": "https://github.com/FelipeFreitasGit/API-REST#readme",
+  "devDependencies": {
+    "eslint": "^5.1.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0"
+  }
+}
